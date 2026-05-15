@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Skating-My Hobby ⛸</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      h1 {
+        font-size: 45px;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        font-size: 29px;
+        font-weight: 400;
+        color: #555;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      button {
+        display: block;
+        margin: 25px auto;
+        border: none;
+        background: linear-gradient(45deg, #680747 0%, #a03c70 100%);
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 15px 30px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        letter-spacing: 0.5px;
+      }
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(45deg, #a03c70 0%, #680747 100%);
+      }
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #666;
+      }
+      footer a {
+        color: #680747;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .theme-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 14px;
+        background: #333;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      .theme-button:hover {
+        color: #eee;
+        background: #555;
+        transform: translateY(-2px);
+      }
+      .skating-first-picture {
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      }
+      .skating-first-picture:hover {
+        filter: brightness(90%);
+        transform: scale(1.02);
+      }
+      .grid {
+        margin: 25px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .grid img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 20px;
+      }
+      p a {
+        color: #680747;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      p a:hover {
+        text-decoration: underline;
+      }
+
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: #f5f5f5;
+      }
+      .dark .container {
+        background: rgba(40, 50, 70, 0.9);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      .dark h1,
+      .dark h2 {
+        color: #e0e0e0;
+      }
+      .dark p {
+        color: #ccc;
+      }
+      .dark a {
+        color: #ff8c00;
+      }
+      .dark button {
+        background: linear-gradient(45deg, #ff8c00 0%, #ffa500 100%);
+        box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+      }
+      .dark button:hover {
+        background: linear-gradient(45deg, #ffa500 0%, #ff8c00 100%);
+        box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+      }
+      .dark .theme-button {
+        background: #eee;
+        color: #333;
+      }
+      .dark .theme-button:hover {
+        background: #ccc;
+        color: #000;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 35px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+        .container {
+          margin: 15px;
+          padding: 20px;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 15px;
+        }
+        button {
+          font-size: 16px;
+          padding: 12px 25px;
+        }
+        .theme-button {
+          top: 10px;
+          right: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 29px;
+        }
+        h2 {
+          font-size: 19px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Ice Skating</h1>
+      <h2>My favourite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Ice_skating" target="_blank">
+        <img
+          src="https://i0.wp.com/www.miwarren.org/wp-content/uploads/2020/01/Ice-Rink-Sunset-735X400.jpg?resize=735%2C400"
+          alt="Ice Skating Rink at Sunset"
+          class="skating-first-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://cdn1.sportngin.com/attachments/photo/89e0-117686259/DSC09545_edited_large.jpg"
+          alt="Ice Hockey Players"
+        />
+        <img
+          src="https://media.istockphoto.com/id/479218948/photo/playing-ice-hockey-on-frozen-lake-in-sunset.jpg?s=612x612&w=0&k=20&c=7_nkPPD81a2H5RH00aH9bdNnIf34WzRAN7FHdmfRifA="
+          alt="Ice Skating on a Frozen Lake"
+        />
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2024/12/shutterstock_2141408485.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2"
+          alt="Figure Skaters"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVj6_2i-xm5mQBRQ-Xo7_KsYCdXWd4oCjMg&s"
+          alt="Ice Skates Close Up"
+        />
+      </div>
+      <p>
+        Ice skating is the self-propulsion and gliding of a person across an ice
+        surface, using metal-bladed ice skates. People skate for various
+        reasons, including recreation (fun), exercise, competitive sports, and
+        commuting. Ice skating may be performed on naturally frozen bodies of
+        water, such as ponds, lakes, canals, and rivers, and on human-made ice
+        surfaces both indoors and outdoors.
+        <br />
+        <br />
+        📖
+        <a href="https://en.wikipedia.org/wiki/Ice_skating">
+          <strong>Read on Wikipedia</strong>
+        </a>
+      </p>
+      <button>Learn How To Skate</button>
+    </div>
+    <footer>
+      Coded with ❤ by
+      <a
+        href="https://www.instagram.com/alicia_rikhotso/?hl=en#"
+        target="_blank"
+        >Alicia Rikhotso</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      let learnHowToSkateButton = document.querySelector(
+        "button:not(.theme-button)"
+      );
+
+      function handleLearnHowToSkateClick() {
+        let name = prompt("Please enter your name:");
+        let email = prompt("Please enter your email address:");
+
+        if (name && email) {
+          alert(`Thanks ${name}! We will get back to you at ${email} shortly.`);
+        } else {
+          alert("Please provide both your name and email address.");
+        }
+      }
+
+      learnHowToSkateButton.addEventListener(
+        "click",
+        handleLearnHowToSkateClick
+      );
+    </script>
+  </body>
+</html>

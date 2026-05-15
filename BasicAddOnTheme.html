@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Skating-My Hobby ⛸</title>
+    <style>
+      body {
+        background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #680747;
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 1opx 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: #680747;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 700px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 18px;
+      }
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .skating-first-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .skating-first-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 7px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.8);
+      }
+      .dark{
+        background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+        color: white;
+      }
+      .dark .container {
+        background: rgba(225, 225, 225, 0.1);
+      }
+      .dark a {
+        color: #680747;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Ice Skating</h1>
+      <h2>My favourite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Ice_skating" target="_blank">
+        <img
+          src="https://i0.wp.com/www.miwarren.org/wp-content/uploads/2020/01/Ice-Rink-Sunset-735X400.jpg?resize=735%2C400"
+          alt
+          class="skating-first-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://cdn1.sportngin.com/attachments/photo/89e0-117686259/DSC09545_edited_large.jpg"
+          alt
+        />
+        <img
+          src="https://media.istockphoto.com/id/479218948/photo/playing-ice-hockey-on-frozen-lake-in-sunset.jpg?s=612x612&w=0&k=20&c=7_nkPPD81a2H5RH00aH9bdNnIf34WzRAN7FHdmfRifA="
+          alt
+        />
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2024/12/shutterstock_2141408485.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2"
+          alt
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVj6_2i-xm5mQBRQ-Xo7_KsYCdXWd4oCjMg&s"
+          alt
+        />
+      </div>
+      <p>
+        Ice skating is the self-propulsion and gliding of a person across an ice
+        surface, using metal-bladed ice skates. People skate for various
+        reasons, including recreation (fun), exercise, competitive sports, and
+        commuting. Ice skating may be performed on naturally frozen bodies of
+        water, such as ponds, lakes, canals, and rivers, and on human-made ice
+        surfaces both indoors and outdoors.
+        <br />
+        <br />
+        📖
+        <a href="https://en.wikipedia.org/wiki/Ice_skating">
+          <strong>Read on Wikipedia</strong>
+        </a>
+      </p>
+      <button>Learn How To Skate</button>
+    </div>
+    <footer>
+      Coded with ❤ by
+      <a
+        href="https://www.instagram.com/alicia_rikhotso/?hl=en#"
+        target="_blank"
+        >Alicia Rikhotso</a
+      >
+    </footer>
+    <script>
+      
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    
+    </script>
+  </body>
+</html>
